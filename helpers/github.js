@@ -1,5 +1,9 @@
 const request = require('request');
-const config = require('../config.js');
+if ('../config.js') {
+  const config = require('../config.js');
+  process.env.GITHUB_API = config.TOKEN;
+}
+
 
 let getReposByUsername = (userName, next) => {
   let options = {
@@ -7,7 +11,7 @@ let getReposByUsername = (userName, next) => {
     headers: {
       'Accept': 'application/vnd.github.v3+json',
       'User-Agent': 'request',
-      'Authorization': `token ${config.TOKEN}`
+      'Authorization': `token ${process.env.GITHUB_API}`
     }
   };
 
