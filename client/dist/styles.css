@@ -1,0 +1,15 @@
+.list {
+  display: block;
+}
+.repo {
+  display: flexbox;
+}
+.title {
+  padding-right: 10px;
+}
+.avatar {
+  float: left;
+  padding-right: 20px;
+  height: 30px;
+  width: auto;
+}
