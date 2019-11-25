@@ -1,8 +1,4 @@
 const request = require('request');
-if ('../config.js') {
-  const config = require('../config.js');
-  process.env.GITHUB_API = config.TOKEN;
-}
 
 
 let getReposByUsername = (userName, next) => {
